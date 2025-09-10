@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Machu Picchu - Susy Miranda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-anton {
+            font-family: 'Anton', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('https://i.ibb.co/vvMPsnCN/imagem-machu-picchu.png');
+        }
+        .culture-bg {
+            background-image: url('https://i.ibb.co/mCHBwcc3/imagem-lago-machu-picchu.png');
+        }
+        .relief-bg {
+            background-image: url('https://i.ibb.co/G4Py0WFv/imagem-relevo.png');
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-20px); }
+            100% { transform: translatey(0px); }
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Seção Hero -->
+    <header class="relative overflow-hidden">
+        <!-- Banner Superior -->
+        <div class="absolute top-0 left-0 right-0 h-24 bg-red-600 flex items-center justify-between px-4 sm:px-6 lg:px-8 z-10">
+            <div class="flex items-center">
+                <img src="https://i.ibb.co/NXm8cFZ/Machu-picchu-1.png" alt="Miniatura Machu Picchu" class="h-16 object-contain">
+            </div>
+            <nav class="flex items-center space-x-4 sm:space-x-6 text-white font-bold text-center">
+                <a href="#faq" class="hover:text-red-200 transition-colors duration-300 text-xs sm:text-sm uppercase tracking-wider">Perguntas Frequentes</a>
+                <div class="h-4 w-px bg-white opacity-50"></div>
+                <a href="#programacao-precos" class="hover:text-red-200 transition-colors duration-300 text-xs sm:text-sm uppercase tracking-wider">Programação</a>
+            </nav>
+        </div>
+
+        <div class="hero-bg bg-cover bg-center h-[800px] md:h-[900px] pt-24">
+            <div class="bg-black bg-opacity-30 h-full flex flex-col items-center justify-center text-white text-center p-4">
+                <img src="https://i.ibb.co/NXm8cFZ/Machu-picchu-1.png" alt="Machu-picchu-1" border="0" class="w-full max-w-3xl mb-8">
+
+                <div class="relative mt-8">
+                    <div class="bg-red-600 text-white font-bold p-4 rounded-lg shadow-lg transform -rotate-6">
+                        <p class="text-2xl">Tour</p>
+                        <p class="text-4xl font-anton">05 A 15</p>
+                        <p class="text-xl">NOVEMBRO 2025</p>
+                    </div>
+                </div>
+
+                <h3 class="mt-16 text-4xl md:text-6xl font-anton text-shadow">A terceira Maravilha do Mundo</h3>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Galeria e Emoção -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto">
+                <!-- Layout para Mobile -->
+                <div class="flex md:hidden gap-4">
+                    <!-- Coluna 1 -->
+                    <div class="w-1/2 flex flex-col gap-4">
+                        <img src="https://i.ibb.co/SDLZ0xrB/iamgem-moradores-de-machu-picchu.png" alt="Pessoas no Peru" class="rounded-lg shadow-lg object-cover object-center h-40 w-full">
+                        <img src="https://i.ibb.co/jPcsv50c/iamgem-alpaca.png" alt="Lhama no Peru" class="rounded-lg shadow-lg object-cover object-center h-40 w-full">
+                        <img src="https://i.ibb.co/NdqptRhL/imagem-crian-a-machu-picchu.png" alt="Criança peruana" class="rounded-lg shadow-lg object-cover object-center h-80 w-full">
+                    </div>
+                    <!-- Coluna 2 -->
+                    <div class="w-1/2 flex flex-col gap-4">
+                        <img src="https://i.ibb.co/gb7X6vJ3/imagem.png" alt="Mulher peruana" class="rounded-lg shadow-lg object-cover object-center h-80 w-full">
+                        <img src="https://i.ibb.co/fJt3xMq/imagem-mercado-de-cusco.png" alt="Mercado de Cusco" class="rounded-lg shadow-lg object-cover object-center h-40 w-full">
+                        <img src="https://i.ibb.co/Qjvpch8Q/imagem-cusco.png" alt="Paisagem Peruana" class="rounded-lg shadow-lg object-cover object-center h-40 w-full">
+                    </div>
+                </div>
+
+                <!-- Layout para Desktop -->
+                <div class="hidden md:grid md:grid-cols-4 gap-4">
+                    <img src="https://i.ibb.co/SDLZ0xrB/iamgem-moradores-de-machu-picchu.png" alt="Pessoas no Peru" class="rounded-lg shadow-lg object-cover object-center h-40 w-full col-span-1">
+                    <img src="https://i.ibb.co/gb7X6vJ3/imagem.png" alt="Mulher peruana" class="rounded-lg shadow-lg object-cover object-center h-80 w-full col-span-1 row-span-2">
+                    <img src="https://i.ibb.co/jPcsv50c/iamgem-alpaca.png" alt="Lhama no Peru" class="rounded-lg shadow-lg object-cover object-center h-40 w-full col-span-1">
+                    <img src="https://i.ibb.co/NdqptRhL/imagem-crian-a-machu-picchu.png" alt="Criança peruana" class="rounded-lg shadow-lg object-cover object-center h-80 w-full col-span-1 row-span-2">
+                    <img src="https://i.ibb.co/fJt3xMq/imagem-mercado-de-cusco.png" alt="Mercado de Cusco" class="rounded-lg shadow-lg object-cover object-center h-40 w-full col-span-1">
+                    <img src="https://i.ibb.co/Qjvpch8Q/imagem-cusco.png" alt="Paisagem Peruana" class="rounded-lg shadow-lg object-cover object-center h-40 w-full col-span-1">
+                </div>
+
+                <div class="text-center mt-16">
+                    <a href="https://api.whatsapp.com/send/?phone=5565992207788&text&type=phone_number&app_absent=0" target="_blank" class="inline-block bg-red-600 text-white font-bold py-4 px-12 rounded-full text-2xl hover:bg-red-700 transition duration-300 shadow-xl transform hover:scale-105">COMEÇAR MINHA AVENTURA</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Inesquecível -->
+        <section class="relief-bg bg-cover bg-center">
+            <div class="bg-black bg-opacity-60">
+                <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 py-16 px-4">
+                    <div class="w-full md:w-1/3">
+                         <img src="https://i.ibb.co/MkzxqcVK/imagem-mulher-turista-cartoon.png" alt="Turista animada" class="mx-auto floating max-w-xs md:max-w-full">
+                    </div>
+                    <div class="w-full md:w-2/3 text-white">
+                        <h2 class="text-6xl font-anton text-shadow">Inesquecível</h2>
+                        <ul class="mt-6 space-y-3 text-lg">
+                            <li class="flex items-center"><svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Saída de Cuiabá MT</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Transporte Rodoviário</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 04 noites em Hotel</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Café da Manhã</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> City Tour</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Templo do Sol e Koricancha</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Atrativos inclusos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="text-center py-12 bg-white">
+             <a href="https://api.whatsapp.com/send/?phone=5565992207788&text&type=phone_number&app_absent=0" target="_blank" class="inline-block bg-red-600 text-white font-bold py-4 px-12 rounded-full text-2xl hover:bg-red-700 transition duration-300 shadow-xl transform hover:scale-105">COMEÇAR MINHA AVENTURA</a>
+        </div>
+
+        <!-- Seção Programação e Preços -->
+        <section id="programacao-precos" class="pt-8 pb-16 px-4 bg-white">
+            <div class="container mx-auto flex flex-col lg:flex-row gap-8">
+                <!-- Programação -->
+                <div class="w-full lg:w-1/2 bg-cyan-700 bg-opacity-10 p-6 rounded-lg">
+                    <h3 class="font-bold text-cyan-800 text-center text-xl">PROGRAMAÇÃO: TOUR TURÍSTICO AO PERU</h3>
+                    <p class="text-center text-cyan-700 font-semibold">Cusco - Machu Picchu - Puno - Lago Titicaca</p>
+                    <div class="mt-6 space-y-4">
+                        <div class="p-3 bg-white rounded shadow"><strong>1º Dia:</strong> Chegada a Cusco, City Tour</div>
+                        <div class="p-3 bg-white rounded shadow"><strong>2º Dia:</strong> Cusco, Hidroelétrica, Aguas Calientes</div>
+                        <div class="p-3 bg-white rounded shadow"><strong>3º Dia:</strong> Machu Picchu, Hidroelétrica, Cusco</div>
+                        <div class="p-3 bg-white rounded shadow"><strong>4º Dia:</strong> Cusco, Vale Sagrado, Puno</div>
+                        <div class="p-3 bg-white rounded shadow"><strong>5º Dia:</strong> Puno, Lago Titicaca, Ilha dos Uros, Taquile</div>
+                        <p class="text-center text-sm text-gray-600 pt-2">... e muito mais aventura pelos próximos dias!</p>
+                    </div>
+                </div>
+                <!-- Preços -->
+                <div class="w-full lg:w-1/2 flex items-center justify-center">
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border-4 border-cyan-600 text-center w-full max-w-md">
+                        <p class="font-semibold text-gray-600">CONDIÇÕES DE PAGAMENTO</p>
+                        <div class="flex justify-center gap-4 my-4 text-sm">
+                            <span class="bg-gray-200 text-gray-800 font-bold py-1 px-3 rounded-full">A VISTA</span>
+                            <span class="bg-gray-200 text-gray-800 font-bold py-1 px-3 rounded-full">PARCELADO ATÉ O EMBARQUE</span>
+                        </div>
+                        <p class="font-semibold text-gray-600">PARCELADO ATÉ 12X CARTÃO DE CRÉDITO</p>
+                        <div class="my-6">
+                            <p class="text-gray-700 text-2xl">EM ATÉ 12X DE</p>
+                            <p class="font-anton text-7xl text-cyan-700">R$ 386,65</p>
+                            <p class="text-gray-700 text-xl mt-4">ou R$ 4.000,00 à vista</p>
+                        </div>
+                         <a href="https://api.whatsapp.com/send/?phone=5565992207788&text&type=phone_number&app_absent=0" target="_blank" class="inline-block bg-cyan-600 text-white font-bold py-4 px-12 rounded-full text-2xl hover:bg-cyan-700 transition duration-300 shadow-xl transform hover:scale-105">COMPRE AGORA!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Imersão Cultural -->
+        <section class="culture-bg bg-cover bg-center h-96">
+             <div class="bg-black bg-opacity-50 h-full flex items-center justify-center text-white text-center p-4">
+                 <h2 class="text-4xl md:text-6xl font-anton text-shadow max-w-4xl">Uma verdadeira Imersão na Cultura de um povo Milenar</h2>
+             </div>
+        </section>
+
+        <!-- Seção Sobre a Guia -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto flex flex-col md:flex-row items-start gap-12">
+                <div class="w-full md:w-auto md:max-w-sm flex-shrink-0">
+                    <img src="https://i.ibb.co/wrSDJQWr/imagem-susy-com-morador-de-cusco.jpg" class="rounded-lg shadow-md object-cover object-center w-full">
+                </div>
+                <div class="w-full">
+                    <div class="flex items-center gap-4">
+                        <img src="https://i.ibb.co/D3RmL0M/Detalhe-vermelho-e-branco.png" alt="Detalhe Peruano" class="w-12 h-12 object-contain">
+                        <h3 class="text-2xl font-bold text-gray-800">SUSY HEIDY JANET MIRANDA CORDOVA</h3>
+                    </div>
+                    <p class="mt-4 text-gray-600 leading-relaxed md:text-lg">
+                        Nascida no Peru, radicada no Brasil onde formou família e está a mais de 30 anos. Formada como Guia de Turismo Reg MT, Nacional e Mercosul, Turismóloga, Consultora internacional de turismo, Embaixadora Câmara de Turismo de Puno-Peru, Presidente CAPES Mulher Conada e atualmente Presidente da SINGTUR-MT Sindicato de Guias de Turismo do estado de Mato Grosso.
+                    </p>
+                    <p class="mt-4 text-gray-600 leading-relaxed md:text-lg">
+                        Cadastrada no Cadastur: 13.018361.96-7, atua nos principais destinos de Mato Grosso como: Chapada dos Guimarães, Nobres, Jaciara, Tangará da Serra, Pantanal e outros. Internacionalmente realiza expedição para Cusco, Machu Picchu, Puno, Lago Titicaca e outros destinos no Peru. Membro do conselho estadual de turismo do Estado de Mato Grosso, liderou diversas missões empresariais e culturais, acompanhou várias expedições internacionais como: Peru, Chile e Argentina.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção FAQ -->
+        <section id="faq" class="py-16 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-anton text-center text-cyan-800 mb-10">Perguntas Frequentes</h2>
+                <div class="max-w-3xl mx-auto" id="faq-container">
+                    <!-- Pergunta 1 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>Qual é a data da viagem?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">A viagem está programada para ocorrer de 05 a 15 de novembro de 2025.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 2 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>O que está incluído no pacote?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">O pacote inclui transporte rodoviário saindo de Cuiabá-MT, 4 noites de hotel com café da manhã, city tour em Cusco, visita ao Templo do Sol e Koricancha, e todos os principais atrativos do roteiro.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 3 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>Preciso de visto para viajar para o Peru?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">Não, brasileiros não precisam de visto para entrar no Peru a turismo. Apenas um documento de identidade (RG) com menos de 10 anos de expedição ou passaporte válido é suficiente.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 4 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>Qual é a forma de pagamento?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">Você pode pagar à vista, parcelado via boleto até a data do embarque, ou em até 12x no cartão de crédito (com acréscimo da operadora).</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 5 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>A viagem é recomendada para todas as idades?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">Sim, a viagem é desenhada para ser aproveitada por pessoas de diversas idades. No entanto, algumas atividades envolvem caminhadas e altitude, então é importante ter uma condição física razoável.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 6 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>Como lidar com o mal da altitude (soroche)?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">Recomendamos aclimatação no primeiro dia em Cusco, bebendo bastante água, chá de coca e evitando comidas pesadas e esforço físico excessivo. A guia Susy dará todas as orientações necessárias.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 7 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>Qual moeda devo levar?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">A moeda local é o Sol Peruano (PEN). É recomendável levar Dólares Americanos (USD) e trocar por Soles ao chegar no Peru para obter uma melhor cotação. Cartões de crédito também são amplamente aceitos.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 8 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>O transporte é seguro e confortável?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">Sim, utilizamos transporte rodoviário moderno e confortável, com motoristas experientes e paradas estratégicas para descanso e alimentação, garantindo uma viagem segura.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 9 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>Existe algum pré-requisito de saúde?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">Não há pré-requisitos obrigatórios, mas é sempre bom estar with a saúde em dia. Recomendamos consultar seu médico antes da viagem, especialmente se tiver condições preexistentes.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 10 -->
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 px-2 flex justify-between items-center text-lg font-semibold text-gray-800 focus:outline-none">
+                            <span>Como faço para reservar minha vaga?</span>
+                            <span class="faq-icon transform transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="p-4 text-gray-600 bg-gray-50">Para garantir sua vaga, basta clicar em qualquer um dos botões "COMEÇAR MINHA AVENTURA" ou "COMPRE AGORA!" nesta página. Você será redirecionado para o WhatsApp para falar diretamente com a Susy Miranda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <footer id="contato" class="bg-cyan-800 py-12 px-4 text-white">
+            <div class="container mx-auto text-center flex flex-col items-center">
+                <img src="https://i.ibb.co/1fHcXrBf/imagem-susy-perfil.jpg" alt="Foto de Susy Miranda" class="rounded-full border-4 border-white w-24 h-24 mb-4 object-cover">
+                <div class="bg-white text-cyan-800 p-6 rounded-lg shadow-lg max-w-sm">
+                    <p class="text-2xl font-bold">Entre em contato!</p>
+                    <p class="text-4xl font-anton my-2">65-9.9220-7788</p>
+                    <p class="font-semibold">Susy Miranda</p>
+                </div>
+                <div class="flex gap-6 mt-6">
+                    <a href="https://www.instagram.com/susymiranda2022" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="https://i.ibb.co/WNDKKVBx/Instagram.png" alt="Instagram" border="0" class="w-10 h-10 object-contain">
+                    </a>
+                    <a href="https://www.facebook.com/susy.mirandacova" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="https://i.ibb.co/b5kZMcjL/facebook.png" alt="facebook" border="0" class="w-10 h-10 object-contain">
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5565992207788&text&type=phone_number&app_absent=0" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="https://i.ibb.co/n8kkKj9j/Whatsapp.png" alt="Whatsapp" border="0" class="w-10 h-10 object-contain">
+                    </a>
+                </div>
+                 <div class="flex gap-4 mt-8">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-6 rounded-sm overflow-hidden"><img src="https://i.ibb.co/RTHfZqzY/Flag_of_Brazil.png" alt="Bandeira do Brasil" class="w-full h-full object-cover"></div>
+                        <span>Brasil</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-6 rounded-sm overflow-hidden"><img src="https://i.ibb.co/pvM3Gn15/Flag_of_Peru.png" alt="Bandeira do Peru" class="w-full h-full object-cover"></div>
+                        <span>Peru</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Seção Créditos -->
+        <div class="bg-[#091833] py-6 px-4 text-white">
+            <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-400">Desenvolvido por</p>
+                <div class="flex gap-6 items-center">
+                    <a href="https://www.instagram.com/g.lbr_digital" target="_blank">
+                        <img src="https://i.ibb.co/5XnQp0D2/Logo-GR-DIGITAL.png" alt="Logo-GR-DIGITAL" class="h-14 object-contain">
+                    </a>
+                    <a href="https://wa.me/message/XQRVZOWI52BKK1" target="_blank">
+                        <img src="https://i.ibb.co/m5pr3Mrd/Logomarca-Omentor.png" alt="Logomarca-Omentor" class="h-14 object-contain">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+
+            question.addEventListener('click', () => {
+                const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+                // Fecha todos os outros itens
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').style.maxHeight = '0px';
+                        otherItem.querySelector('.faq-icon').classList.remove('rotate-45');
+                    }
+                });
+
+                // Abre ou fecha o item clicado
+                if (isOpen) {
+                    answer.style.maxHeight = '0px';
+                    icon.classList.remove('rotate-45');
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.classList.add('rotate-45');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
